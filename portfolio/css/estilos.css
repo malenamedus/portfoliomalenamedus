@@ -1,0 +1,167 @@
+@font-face {
+    font-family: miFuente ;
+    src: url(../fuente/Gambetta-Italic.otf);
+    font-weight: 200;
+    font-size: large;
+ 
+} 
+
+@font-face {
+    font-family: miFuente2 ;
+    src: url(../fuente/Gambetta-Regular.otf);
+    font-weight: 100;
+} 
+
+@font-face {
+    font-family: miFuente3 ;
+    src: url(../fuente/Gambetta-Light.otf);
+    font-weight: 100;
+} 
+
+
+*{
+    box-sizing: border-box;
+}
+
+header { 
+content: flex;
+} 
+
+.contenedor{
+width: 100%;
+height: 100vh;
+display:grid;
+grid-template-areas: 
+"nav nav nav nav"
+"side-area main Main2 side-area2"
+"side-area main Main2 side-area2"
+"footer footer footer footer";
+grid-gap: 0.2rem;
+grid-template-rows: 0.2fr 1fr 1fr 70px;
+grid-template-columns: 300px 1fr 1fr 300px;
+
+}
+
+.nav{
+    grid-area:nav;
+    display: block;
+    clear: both;
+}
+
+h1 {
+    font-family: miFuente;
+    font-size: 3.5em;
+    font-weight: 200;
+    text-align: center;
+    margin-top: 1%;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0.8px;
+}
+
+.main-content{
+    grid-area: main;
+    /* background-color: aquamarine; */
+  
+}
+.virus {
+    margin-top: 15%;
+
+}
+
+.sonirico {
+    margin-top: 15.2%;
+}
+
+h2{
+    font-family: miFuente2;
+    font-size: 1em;
+    font-weight: 200;
+    margin-top: -3%;
+    margin-left: 15%;
+    
+}
+
+h3 {
+    font-family: miFuente3;
+    font-size: 1.2em;
+    font-weight: 200;
+    margin-left: 88%;   
+    text-decoration: none;
+    color: black;
+    text-decoration: underline;
+    color: black;
+}
+
+.gauchadaboton {
+border: 2.5px solid white;
+color: white;
+}  
+
+.gauchadaboton:hover {
+ border-color: red;
+  transition: .4es ease;
+    }  
+
+
+.main-content2{
+    grid-area: Main2;
+    /* background-color: blue; */
+   
+}
+
+
+.icono{
+    text-decoration: none;
+    color: black;
+    text-decoration: underline;
+    color: black;
+}
+
+.icono:hover {
+    color: red;
+     transition: .4es ease;
+       }  
+       
+.side-area {
+    /* background-color: blueviolet; */
+    grid-area: side-area;
+}
+
+.side-area2 {
+    /* background-color: pink; */
+    grid-area: side-area2;
+} 
+
+.footer {
+    grid-area: footer;
+    
+}
+
+@media  (max-width:800px){
+
+    .main-content2{
+        grid-area: Main2;
+        margin-top: 10%;
+    
+        
+       
+    }
+    .footer {
+        grid-area: footer;
+       margin-right: 55%;
+    }
+    .contenedor  { grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas: 
+        "nav"
+        "side-area"
+        "main"
+        "Main2"
+        "side-area2"
+        "footer";
+}
+
+
+}
+
+
